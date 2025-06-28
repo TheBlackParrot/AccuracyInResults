@@ -1,6 +1,8 @@
 # AccuracyInResults
 Replaces the rank text in the results screen with your accuracy
 
+![Screenshot of the AccuracyInResults mod for Beat Saber](screenshot.png)
+
 ---
 
 ## Configuration
