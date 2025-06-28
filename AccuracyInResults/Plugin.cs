@@ -14,6 +14,7 @@ namespace AccuracyInResults;
 [UsedImplicitly]
 internal class Plugin
 {
+    // ReSharper disable once MemberCanBePrivate.Global
     internal static IPALogger Log { get; private set; } = null!;
 
     [Init]

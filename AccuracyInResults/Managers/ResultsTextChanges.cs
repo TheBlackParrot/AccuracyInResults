@@ -1,6 +1,5 @@
 ﻿using AccuracyInResults.Configuration;
 using HMUI;
-using IPA.Config;
 using JetBrains.Annotations;
 using UnityEngine;
 using Zenject;
