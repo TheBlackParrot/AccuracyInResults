@@ -1,0 +1,6 @@
+﻿<settings-container xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+                    xsi:noNamespaceSchemaLocation='https://monkeymanboy.github.io/BSML-Docs/BSMLSchema.xsd'>
+    <slider-setting value="DecimalPrecision" text="Decimal Precision"
+                    integer-only="true" min="0" max="4"
+                    show-buttons="true" apply-on-change="true"/>
+</settings-container>
