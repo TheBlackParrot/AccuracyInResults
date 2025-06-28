@@ -2,13 +2,27 @@
 <!-- This file contains project properties used by the build. -->
 <Project>
 
+  <PropertyGroup Condition="$(Configuration) == 'Release-1.39.1' Or $(Configuration) == 'Debug-1.39.1'">
+    <GameVersion>1.39.1</GameVersion>
+
+    <BSIPAVersion>4.3.5</BSIPAVersion>
+    <BSMLVersion>1.12.4</BSMLVersion>
+    <SiraUtilVersion>3.1.14</SiraUtilVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(Configuration) == 'Release-1.40.6' Or $(Configuration) == 'Debug-1.40.6'">
+    <GameVersion>1.40.6</GameVersion>
+
+    <BSIPAVersion>4.3.6</BSIPAVersion>
+    <BSMLVersion>1.12.5</BSMLVersion>
+    <SiraUtilVersion>3.2.1</SiraUtilVersion>
+  </PropertyGroup>
+
   <!-- Plugin Metadata -->
   <PropertyGroup>
     <PluginId>AccuracyInResults</PluginId>
     <PluginName>AccuracyInResults</PluginName>
     <Authors>TheBlackParrot</Authors>
-    <Version>0.0.0</Version>
-    <GameVersion>1.40.6</GameVersion>
+    <Version>0.0.0+$(GameVersion)</Version>
     <Description>Replaces the rank text in the results screen with your accuracy</Description>
     <!--<PluginIcon></PluginIcon>-->
     <ProjectSource>https://github.com/TheBlackParrot/AccuracyInResults</ProjectSource>
@@ -18,7 +32,9 @@
 
   <!-- Plugin Dependencies -->
   <ItemGroup>
-    <DependsOn Include="BSIPA" Version="^4.3.0"/>
+    <DependsOn Include="BSIPA" Version="^$(BSIPAVersion)"/>
+    <DependsOn Include="BeatSaberMarkupLanguage" Version="^$(BSMLVersion)"/>
+    <DependsOn Include="SiraUtil" Version="^$(SiraUtilVersion)"/>
   </ItemGroup>
   
   <PropertyGroup>

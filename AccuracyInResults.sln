@@ -4,13 +4,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccuracyInResults", "Accura
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
+		Release-1.40.6|Any CPU = Release-1.40.6|Any CPU
+		Debug-1.39.1|Any CPU = Debug-1.39.1|Any CPU
+		Debug-1.40.6|Any CPU = Debug-1.40.6|Any CPU
+		Release-1.39.1|Any CPU = Release-1.39.1|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{20DF38DF-B0F2-4B25-9129-627B4C4572A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{20DF38DF-B0F2-4B25-9129-627B4C4572A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{20DF38DF-B0F2-4B25-9129-627B4C4572A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{20DF38DF-B0F2-4B25-9129-627B4C4572A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20DF38DF-B0F2-4B25-9129-627B4C4572A0}.Release-1.40.6|Any CPU.ActiveCfg = Release-1.40.6|Any CPU
+		{20DF38DF-B0F2-4B25-9129-627B4C4572A0}.Release-1.40.6|Any CPU.Build.0 = Release-1.40.6|Any CPU
+		{20DF38DF-B0F2-4B25-9129-627B4C4572A0}.Debug-1.39.1|Any CPU.ActiveCfg = Debug-1.39.1|Any CPU
+		{20DF38DF-B0F2-4B25-9129-627B4C4572A0}.Debug-1.39.1|Any CPU.Build.0 = Debug-1.39.1|Any CPU
+		{20DF38DF-B0F2-4B25-9129-627B4C4572A0}.Debug-1.40.6|Any CPU.ActiveCfg = Debug-1.40.6|Any CPU
+		{20DF38DF-B0F2-4B25-9129-627B4C4572A0}.Debug-1.40.6|Any CPU.Build.0 = Debug-1.40.6|Any CPU
+		{20DF38DF-B0F2-4B25-9129-627B4C4572A0}.Release-1.39.1|Any CPU.ActiveCfg = Release-1.39.1|Any CPU
+		{20DF38DF-B0F2-4B25-9129-627B4C4572A0}.Release-1.39.1|Any CPU.Build.0 = Release-1.39.1|Any CPU
 	EndGlobalSection
 EndGlobal
