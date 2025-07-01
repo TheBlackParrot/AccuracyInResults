@@ -22,7 +22,7 @@
     <PluginId>AccuracyInResults</PluginId>
     <PluginName>AccuracyInResults</PluginName>
     <Authors>TheBlackParrot</Authors>
-    <Version>0.1.0+$(GameVersion)</Version>
+    <Version>0.1.1+$(GameVersion)</Version>
     <Description>Replaces the rank text in the results screen with your accuracy</Description>
     <!--<PluginIcon></PluginIcon>-->
     <ProjectSource>https://github.com/TheBlackParrot/AccuracyInResults</ProjectSource>
