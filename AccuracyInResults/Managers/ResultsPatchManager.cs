@@ -1,6 +1,7 @@
 ﻿using AccuracyInResults.Configuration;
 using JetBrains.Annotations;
 using SiraUtil.Affinity;
+using TMPro;
 
 namespace AccuracyInResults.Managers;
 
@@ -24,6 +25,17 @@ internal class ResultsPatchManager : IAffinity
     // ReSharper disable once InconsistentNaming
     private void SetDataToUIPatch(ResultsViewController __instance)
     {
+        if (Config.EnableFullComboAccDisplay)
+        {
+            __instance._rankText.paragraphSpacing = -58;
+            __instance._rankText.verticalAlignment = VerticalAlignmentOptions.Bottom;
+        }
+        else
+        {
+            __instance._rankText.paragraphSpacing = 0;
+            __instance._rankText.verticalAlignment = ResultsTextChanges.InitialVerticalAlignmentOptions ?? __instance._rankText.verticalAlignment;
+        }
+        
         int score = __instance._levelCompletionResults.modifiedScore;
         float acc = score / (float)_maxScore;
         
@@ -31,6 +43,21 @@ internal class ResultsPatchManager : IAffinity
         Plugin.DebugMessage($"Max Score: {_maxScore}");
         Plugin.DebugMessage($"Determined Acc: {acc * 100}%");
         
-        __instance._rankText.text = $"{(acc * 100).ToString("F" + Config.DecimalPrecision)}<alpha=#A0><size=67%>%</size>";
+        __instance._rankText.text = $"{(acc * 100).ToString("F" + Config.DecimalPrecision)}<alpha=#A0><size=67%>%</size><alpha=#FF>";
+
+        if (!Config.EnableFullComboAccDisplay)
+        {
+            return;
+        }
+        
+        int fcScore = CutScorePatchManager.ScoreWithoutMisses;
+        float fcAcc = fcScore / (float)CutScorePatchManager.MaxScoreWithoutMisses;
+            
+        Plugin.DebugMessage($"FC Score: {fcScore}");
+        Plugin.DebugMessage($"FC Max Score: {CutScorePatchManager.MaxScoreWithoutMisses}");
+        Plugin.DebugMessage($"Determined FC Acc: {fcAcc * 100}%");
+            
+        __instance._rankText.text +=
+            $"\n<size=3><alpha=#A0>FC <alpha=#FF>{(fcAcc * 100).ToString("F" + Config.DecimalPrecision)}<alpha=#A0><size=2>%</size></size>";
     }
 }

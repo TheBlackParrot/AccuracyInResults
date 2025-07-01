@@ -21,6 +21,11 @@ internal class ModSettingsViewController : IInitializable, IDisposable
         BeatSaberMarkupLanguage.Settings.BSMLSettings.Instance?.RemoveSettingsMenu(this);
     }
 
+    protected bool EnableFullComboAccDisplay
+    {
+        get => Config.EnableFullComboAccDisplay;
+        set => Config.EnableFullComboAccDisplay = value;
+    }
     protected int DecimalPrecision
     {
         get => Config.DecimalPrecision;

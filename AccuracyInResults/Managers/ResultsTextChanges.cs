@@ -1,6 +1,7 @@
 ﻿using AccuracyInResults.Configuration;
 using HMUI;
 using JetBrains.Annotations;
+using TMPro;
 using UnityEngine;
 using Zenject;
 
@@ -16,6 +17,8 @@ internal class ResultsTextChanges : IInitializable
     {
         _resultsViewController = resultsViewController;
     }
+    
+    internal static VerticalAlignmentOptions? InitialVerticalAlignmentOptions;
 
     public void Initialize()
     {
@@ -24,11 +27,14 @@ internal class ResultsTextChanges : IInitializable
             return;
         }
         
+        InitialVerticalAlignmentOptions ??= _resultsViewController._rankText.verticalAlignment;
+        
         _resultsViewController._rankText.enableWordWrapping = false;
         _resultsViewController._rankText.richText = true;
         _resultsViewController._rankText.color = Color.white;
         _resultsViewController._rankText.fontSize = _resultsViewController._goodCutsPercentageText.fontSize;
-        
+        _resultsViewController._rankText.rectTransform.offsetMin = new Vector2(-26.5f, _resultsViewController._rankText.rectTransform.offsetMin.y);
+
         Transform? rankTitle = _resultsViewController.transform.FindChildRecursively("RankTitle");
         if(rankTitle?.TryGetComponent(out BGLib.Polyglot.LocalizedTextMeshProUGUI localizedTextMeshProUGUI) ?? false)
         {
