@@ -17,8 +17,6 @@ internal class ResultsTextChanges : IInitializable
     {
         _resultsViewController = resultsViewController;
     }
-    
-    internal static VerticalAlignmentOptions? InitialVerticalAlignmentOptions;
 
     public void Initialize()
     {
@@ -26,8 +24,6 @@ internal class ResultsTextChanges : IInitializable
         {
             return;
         }
-        
-        InitialVerticalAlignmentOptions ??= _resultsViewController._rankText.verticalAlignment;
         
         _resultsViewController._rankText.enableWordWrapping = false;
         _resultsViewController._rankText.richText = true;
@@ -42,8 +38,8 @@ internal class ResultsTextChanges : IInitializable
         // ReSharper disable once InvertIf
         if (rankTitle?.TryGetComponent(out CurvedTextMeshPro textMeshPro) ?? false)
         {
-            textMeshPro.rectTransform.offsetMin = new Vector2(-26.5f, textMeshPro.rectTransform.offsetMin.y);
             textMeshPro.text = Config.AccuracyText;
+            textMeshPro.transform.localPosition = textMeshPro.transform.localPosition with { x = 38.33f };
         }
     }
 }
