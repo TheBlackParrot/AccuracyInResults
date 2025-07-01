@@ -33,15 +33,16 @@ internal class ResultsTextChanges : IInitializable
         _resultsViewController._rankText.richText = true;
         _resultsViewController._rankText.color = Color.white;
         _resultsViewController._rankText.fontSize = _resultsViewController._goodCutsPercentageText.fontSize;
-        _resultsViewController._rankText.rectTransform.offsetMin = new Vector2(-26.5f, _resultsViewController._rankText.rectTransform.offsetMin.y);
 
         Transform? rankTitle = _resultsViewController.transform.FindChildRecursively("RankTitle");
         if(rankTitle?.TryGetComponent(out BGLib.Polyglot.LocalizedTextMeshProUGUI localizedTextMeshProUGUI) ?? false)
         {
             Object.DestroyImmediate(localizedTextMeshProUGUI);
         }
+        // ReSharper disable once InvertIf
         if (rankTitle?.TryGetComponent(out CurvedTextMeshPro textMeshPro) ?? false)
         {
+            textMeshPro.rectTransform.offsetMin = new Vector2(-26.5f, textMeshPro.rectTransform.offsetMin.y);
             textMeshPro.text = Config.AccuracyText;
         }
     }
