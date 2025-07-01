@@ -28,6 +28,7 @@ internal class Plugin
         
         zenjector.Install<AppInstaller>(Location.App);
         zenjector.Install<MenuInstaller>(Location.Menu);
+        zenjector.Install<GameInstaller>(Location.GameCore);
         
         Log.Info("Plugin loaded");
     }
