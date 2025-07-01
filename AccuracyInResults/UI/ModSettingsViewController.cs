@@ -31,4 +31,9 @@ internal class ModSettingsViewController : IInitializable, IDisposable
         get => Config.DecimalPrecision;
         set => Config.DecimalPrecision = value;
     }
+    protected int FullComboAccVerticalSpacing
+    {
+        get => Config.FullComboAccVerticalSpacing;
+        set => Config.FullComboAccVerticalSpacing = value;
+    }
 }

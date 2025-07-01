@@ -25,7 +25,7 @@ internal class ResultsPatchManager : IAffinity
     // ReSharper disable once InconsistentNaming
     private void SetDataToUIPatch(ResultsViewController __instance)
     {
-        __instance._rankText.paragraphSpacing = Config.EnableFullComboAccDisplay ? -58 : 0;
+        __instance._rankText.paragraphSpacing = Config.EnableFullComboAccDisplay ? Config.FullComboAccVerticalSpacing : 0;
         __instance._rankText.verticalAlignment = Config.EnableFullComboAccDisplay ? VerticalAlignmentOptions.Bottom : VerticalAlignmentOptions.Geometry;
         
         int score = __instance._levelCompletionResults.modifiedScore;

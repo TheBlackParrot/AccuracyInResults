@@ -4,6 +4,10 @@
                     apply-on-change="true"/>
     
     <slider-setting value="DecimalPrecision" text="Decimal Precision"
-                    integer-only="true" min="0" max="4"
+                    integer-only="true" min="0" max="4" increment="1"
+                    show-buttons="true" apply-on-change="true"/>
+    <slider-setting value="FullComboAccVerticalSpacing" text="FC Acc. Vertical Spacing"
+                    hover-hint="Vertical spacing between the accuracy and full combo accuracy display. Can fix vertical alignment issues with custom fonts. (default: -40)"
+                    integer-only="true" min="-100" max="100" increment="1"
                     show-buttons="true" apply-on-change="true"/>
 </settings-container>

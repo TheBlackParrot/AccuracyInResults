@@ -16,4 +16,5 @@ internal class PluginConfig
     public virtual bool EnableFullComboAccDisplay { get; set; } = false;
     public virtual int DecimalPrecision { get; set; } = 2;
     public virtual string AccuracyText { get; set; } = "accuracy";
+    public virtual int FullComboAccVerticalSpacing { get; set; } = -40;
 }
