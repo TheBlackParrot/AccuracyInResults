@@ -22,13 +22,18 @@
     <PluginId>AccuracyInResults</PluginId>
     <PluginName>AccuracyInResults</PluginName>
     <Authors>TheBlackParrot</Authors>
-    <Version>0.1.1+$(GameVersion)</Version>
+    <Version>0.1.2+$(GameVersion)</Version>
     <Description>Replaces the rank text in the results screen with your accuracy</Description>
     <!--<PluginIcon></PluginIcon>-->
     <ProjectSource>https://github.com/TheBlackParrot/AccuracyInResults</ProjectSource>
     <ProjectHome>https://github.com/TheBlackParrot/AccuracyInResults</ProjectHome>
     <DonateUrl>https://ko-fi.com/septilateral</DonateUrl>
   </PropertyGroup>
+  
+  <!-- Plugin Conflicts -->
+  <ItemGroup>
+    <ConflictsWith Include="SongPlayHistory" Version="^2.1.6"/>
+  </ItemGroup>
 
   <!-- Plugin Dependencies -->
   <ItemGroup>
